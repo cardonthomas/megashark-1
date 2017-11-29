@@ -40,8 +40,8 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Released_date') ?></th>
-            <td><?= $this->Number->format($movie->Released_date) ?></td>
-        </tr>
+            <td><?= h($movie->released_date) ?></td>
+        </tr>    
     </table>
     <div class="row">
         <h4><?= __('Description') ?></h4>
@@ -70,6 +70,7 @@
                 <td><?= h($showtimes->end) ?></td>
                 <td><?= h($showtimes->created) ?></td>
                 <td><?= h($showtimes->modified) ?></td>
+                <td><?= h($showtimes->Released_date) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Showtimes', 'action' => 'view', $showtimes->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Showtimes', 'action' => 'edit', $showtimes->id]) ?>
