@@ -36,5 +36,21 @@
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($room->modified) ?></td>
         </tr>
+       
     </table>
+</div>
+<div class="rooms index large-9 medium-8 columns content">
+    <h3><?= __('Rooms') ?></h3>
+    <table cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th scope="col"><?= $this->Paginator->sort('Lundi') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Mardi') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Mercredi') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Jeudi') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Vendredi') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Samedi') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Dimanche') ?></th>
+            </tr>
+        </thead>
 </div>

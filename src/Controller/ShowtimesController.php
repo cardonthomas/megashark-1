@@ -53,6 +53,7 @@ class ShowtimesController extends AppController
      */
     public function add()
     {
+
         $showtime = $this->Showtimes->newEntity();
         if ($this->request->is('post')) {
             $showtime = $this->Showtimes->patchEntity($showtime, $this->request->getData());

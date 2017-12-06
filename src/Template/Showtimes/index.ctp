@@ -29,6 +29,10 @@
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
+        
+     
+        
+        
         <tbody>
             <?php foreach ($showtimes as $showtime): ?>
             <tr>
