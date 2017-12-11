@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property int $duration
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
- * @property \Cake\I18n\FrozenDate $released_date
+ * @property \Cake\I18n\FrozenDate $release_date
  *
  * @property \App\Model\Entity\Showtime[] $showtimes
  */

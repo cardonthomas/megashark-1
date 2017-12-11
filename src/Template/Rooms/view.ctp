@@ -1,7 +1,7 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \Cake\Datasource\EntityInterface $room
+ * @var \App\Model\Entity\Room $room
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
@@ -40,17 +40,43 @@
     </table>
 </div>
 <div class="rooms index large-9 medium-8 columns content">
-    <h3><?= __('Rooms') ?></h3>
+    <h3><?= __('Planning semaine') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('Lundi') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Mardi') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Mercredi') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Jeudi') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Vendredi') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Samedi') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Dimanche') ?></th>
+                <th scope="col"><?= __('Lundi') ?></th>
+                <th scope="col"><?= __('Mardi') ?></th>
+                <th scope="col"><?= __('Mercredi') ?></th>
+                <th scope="col"><?= __('Jeudi') ?></th>
+                <th scope="col"><?= __('Vendredi') ?></th>
+                <th scope="col"><?= __('Samedi') ?></th>
+                <th scope="col"><?= __('Dimanche') ?></th>
+            </tr> 
+            </thead>
+        <?php for($i=1;$i<=7;$i++){?>
+            <td>
+            <table>
+            <?php foreach ($showtimes as $showtime): ?>
+            <tr>
+
+                   <?php 
+                    $test = ($showtime->start)->format('N');
+                    if($test==$i){?>
+                        <tr>
+                        <td>
+                        <?php echo h($showtime->movie->name );
+                        echo h($showtime->movie->duration );
+                        echo h($showtime->start );
+                        echo h($showtime->end );
+                        }
+                    ?>
+
             </tr>
-        </thead>
+        <?php endforeach;  ?>
+
+        </table>
+        </td>
+        <?php } ?>
+
+    </table>
 </div>

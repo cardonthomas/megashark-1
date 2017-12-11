@@ -33,7 +33,7 @@ class CreateShowtimes extends AbstractMigration
         ]);
         $table->addColumn('created', 'datetime', [
             'default' => null,
-            'null' => false,
+            'null' => false,cd meg
         ]);
         $table->addColumn('modified', 'datetime', [
             'default' => null,
